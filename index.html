@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Inti Ruchi – Homemade Pickles from Mother’s Kitchen</title>
-<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mukta:wght@400;600;700&family=Noto+Serif+Telugu:wght@700&display=swap" rel="stylesheet">
+
+<!-- Website Favicon -->
+<link rel="icon" type="image/jpeg" href="images/Inti-ruchi-logo.jpeg">
+
+<!-- Apple Mobile Icon -->
+<link rel="apple-touch-icon" href="images/Inti-ruchi-logo.jpeg">
 <style>
 :root{--bg:#fff6df;--card:#fffdf6;--ink:#3b1a0e;--mute:#7a5a45;--red:#8c1c13;--gold:#e8a317;--leaf:#2f6b2f;--nv:#b3261e;--line:#e3c98f;--safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px);box-sizing:border-box;padding-top:var(--safe-t);padding-bottom:var(--safe-b)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a120b;--card:#3a1b11;--ink:#fbeccb;--mute:#d5b48f;--red:#e0584a;--line:#6b4326}}
@@ -34,6 +39,237 @@ nav a:hover{color:var(--gold)}
 }
 .hero h1{font-size:clamp(24px,5vw,40px);margin:6px 0 14px}
 .hero p{max-width:620px;margin:0 auto 24px;color:var(--mute);font-size:19px}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    line-height: 1.1;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff6df;
+}
+
+.logo b {
+    display: block;
+    font-family: 'Rozha One', serif;
+    font-size: 26px;
+    color: #fff3d1;
+}
+
+.logo span {
+    display: block;
+    font-size: 13px;
+    color: var(--gold);
+}
+
+/* PREMIUM INTI RUCHI LOADING SCREEN */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: radial-gradient(circle, #fffdf5 0%, #fff6df 65%, #f1dfb5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Decorative rotating rings */
+#loader::before,
+#loader::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#loader::before {
+    width: 340px;
+    height: 340px;
+    border: 1px solid #d9b66e;
+    animation: ringRotate 14s linear infinite;
+}
+
+#loader::after {
+    width: 390px;
+    height: 390px;
+    border: 1px dashed #c99a48;
+    animation: ringRotate 22s linear infinite reverse;
+}
+
+/* Floating golden particles */
+.loader-particle {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #e8a317;
+    border-radius: 50%;
+    opacity: .6;
+    animation: floatParticle 4s ease-in-out infinite;
+}
+
+.loader-particle:nth-child(2) { top: 20%; left: 25%; }
+.loader-particle:nth-child(3) { top: 28%; right: 22%; animation-delay: 1s; }
+.loader-particle:nth-child(4) { bottom: 25%; left: 20%; animation-delay: 2s; }
+.loader-particle:nth-child(5) { bottom: 20%; right: 25%; animation-delay: .5s; }
+
+/* Logo */
+#loader img {
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 8px 16px #6b432644);
+    animation: logoAppear 1.5s ease both, logoPulse 3s ease-in-out 1.5s infinite;
+}
+
+/* Brand name */
+#loader h2 {
+    position: relative;
+    z-index: 2;
+    color: #8c1c13;
+    font-family: 'Rozha One', serif;
+    font-size: 38px;
+    margin: 22px 0 4px;
+    letter-spacing: 1.5px;
+    animation: fadeUp 1.5s ease both;
+}
+
+/* Tagline */
+#loader p {
+    position: relative;
+    z-index: 2;
+    color: #72503b;
+    font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 0;
+    animation: fadeUp 1.8s ease both;
+}
+
+/* Welcome text */
+.loader-welcome {
+    position: relative;
+    z-index: 2;
+    color: #8c1c13;
+    font-family: 'Mukta', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 24px;
+    animation: fadeUp 2s ease both;
+}
+
+/* Progress bar */
+.loading-bar {
+    position: relative;
+    z-index: 2;
+    width: 210px;
+    height: 5px;
+    background: #e5d4a9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+.loading-bar::after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #2f6b2f, #e8a317, #8c1c13);
+    animation: progressMove 2s ease-in-out infinite;
+}
+
+.loading-text {
+    position: relative;
+    z-index: 2;
+    margin-top: 12px;
+    color: #80674c;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes logoAppear {
+    from { opacity: 0; transform: scale(.7); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes logoPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progressMove {
+    from { transform: translateX(-110%); }
+    to { transform: translateX(360%); }
+}
+
+@keyframes ringRotate {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes floatParticle {
+    0%, 100% { transform: translateY(0); opacity: .3; }
+    50% { transform: translateY(-22px); opacity: .9; }
+}
+
+/* Smooth exit */
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+    #loader img {
+        width: 160px;
+        height: 160px;
+    }
+
+    #loader h2 { font-size: 31px; }
+
+    #loader::before {
+        width: 275px;
+        height: 275px;
+    }
+
+    #loader::after {
+        width: 315px;
+        height: 315px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    #loader *,
+    #loader::before,
+    #loader::after {
+        animation: none !important;
+    }
+}
+
 .btn{display:inline-block;background:var(--red);color:#fff;border:2px solid var(--gold);border-radius:8px;padding:12px 26px;font:700 18px 'Mukta';text-decoration:none;cursor:pointer}
 .btn.wa{background:#1e8e4a}
 .chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
@@ -90,9 +326,42 @@ footer a{color:var(--gold)}
 </style>
 </head>
 <body>
+
+<div id="loader">
+
+    <span class="loader-particle"></span>
+    <span class="loader-particle"></span>
+    <span class="loader-particle"></span>
+    <span class="loader-particle"></span>
+
+    <img src="images/Inti-ruchi-logo.jpeg"
+         alt="Inti Ruchi Homemade Pickles">
+
+    <h2>Inti Ruchi</h2>
+
+    <p>Made at Home. Made with Love.</p>
+
+    <div class="loader-welcome">
+        A Taste of Tradition, Made with Love ❤️
+    </div>
+
+    <div class="loading-bar"></div>
+
+    <div class="loading-text">
+        Preparing Your Experience...
+    </div>
+
+</div>
+
 <div class="border"></div>
 <header>
-  <div class="logo"><b>Inti Ruchi</b><span>A Mother’s Kitchen</span></div>
+  <div class="logo">
+    <img src="images/Inti-ruchi-logo.jpeg" alt="Inti Ruchi Logo">
+    <div>
+        <b>Inti Ruchi</b>
+        <span>A Mother’s Kitchen</span>
+    </div>
+</div>
   <nav><a href="#shop">Pickles</a><a href="#why">Why Inti Ruchi</a><a href="#how">How to order</a>
   <button class="cartbtn" id="openCart" aria-label="Open cart">🛒 Cart<i id="cnt">0</i></button></nav>
 </header>
@@ -266,6 +535,10 @@ $("send").addEventListener("click", function () {
 
 
 render();upd();
+
+window.addEventListener("load", function () {
+    document.getElementById("loader").classList.add("hide");
+});
 </script>
 </body>
 </html>
