@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inti Ruchi – Homemade Pickles from Mother’s Kitchen</title>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mukta:wght@400;600;700&family=Noto+Serif+Telugu:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6df;--card:#fffdf6;--ink:#3b1a0e;--mute:#7a5a45;--red:#8c1c13;--gold:#e8a317;--leaf:#2f6b2f;--nv:#b3261e;--line:#e3c98f;--safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px);box-sizing:border-box;padding-top:var(--safe-t);padding-bottom:var(--safe-b)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a120b;--card:#3a1b11;--ink:#fbeccb;--mute:#d5b48f;--red:#e0584a;--line:#6b4326}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Mukta',sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:'Rozha One',serif;font-weight:400;margin:0;line-height:1.2}
+.te{font-family:'Noto Serif Telugu',serif}
+.border{height:14px;background:repeating-linear-gradient(90deg,var(--red) 0 18px,var(--gold) 18px 36px,var(--leaf) 36px 54px)}
+header{position:sticky;top:var(--safe-t);z-index:20;background:var(--red);color:#fff3d1;display:flex;align-items:center;justify-content:space-between;padding:10px 5vw;border-bottom:3px solid var(--gold)}
+.logo{display:flex;flex-direction:column;line-height:1.1}.logo b{font-family:'Rozha One';font-size:26px}.logo span{font-size:13px;color:var(--gold)}
+nav{display:flex;gap:20px;align-items:center}nav a{color:#fff3d1;text-decoration:none;font-weight:600}
+nav a:hover{color:var(--gold)}
+.cartbtn{background:var(--gold);color:#3b1a0e;border:0;border-radius:30px;padding:8px 16px;font:700 16px 'Mukta';cursor:pointer}
+.cartbtn i{font-style:normal;background:var(--red);color:#fff;border-radius:50%;padding:1px 8px;margin-left:6px;font-size:14px}
+@media(max-width:640px){nav a{display:none}}
+.hero{text-align:center;padding:56px 6vw 48px;background:radial-gradient(circle at 50% 0,#ffe9a8,transparent 70%)}
+.hero .te {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(60px, 12vw, 110px);
+    font-family: 'Noto Serif Telugu', serif;
+    font-weight: 700;
+    color: var(--red);
+    margin: 0 auto !important;
+    line-height: 1.4;
+}
+.hero h1{font-size:clamp(24px,5vw,40px);margin:6px 0 14px}
+.hero p{max-width:620px;margin:0 auto 24px;color:var(--mute);font-size:19px}
+.btn{display:inline-block;background:var(--red);color:#fff;border:2px solid var(--gold);border-radius:8px;padding:12px 26px;font:700 18px 'Mukta';text-decoration:none;cursor:pointer}
+.btn.wa{background:#1e8e4a}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.chips span{border:1.5px dashed var(--red);border-radius:30px;padding:4px 14px;font-weight:600;font-size:15px}
+section{padding:44px 5vw;max-width:1180px;margin:auto}
+.sec-title{text-align:center;margin-bottom:24px}.sec-title h2{font-size:clamp(28px,5vw,38px);color:var(--red)}
+.sec-title p{margin:4px 0 0;color:var(--mute)}
+.filters{display:flex;gap:10px;justify-content:center;margin-bottom:26px;flex-wrap:wrap}
+.filters button{background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:30px;padding:8px 20px;font:700 16px 'Mukta';cursor:pointer;display:flex;gap:8px;align-items:center}
+.filters button.on{background:var(--red);color:#fff;border-color:var(--gold)}
+.dot{width:16px;height:16px;border:2px solid var(--leaf);display:inline-grid;place-items:center;background:#fff;flex:none}
+.dot:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--leaf)}
+.dot.nv{border-color:var(--nv)}.dot.nv:after{background:var(--nv)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px 14px 40px 14px;overflow:hidden;display:flex;flex-direction:column}
+.jar{height:150px;display:grid;place-items:center;position:relative;background:linear-gradient(var(--c1),var(--c2))}
+.jar svg{width:96px;height:120px}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:20px;display:flex;gap:8px;align-items:center}
+.card .te2{font-size:14px;color:var(--mute);margin-top:-6px}
+.card p{margin:0;font-size:15px;color:var(--mute);flex:1}
+.row{display:flex;gap:8px;align-items:center;justify-content:space-between}
+select{font:600 15px 'Mukta';padding:6px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.price{font:400 22px 'Rozha One';color:var(--red)}
+.add{background:var(--leaf);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:700 15px 'Mukta';cursor:pointer}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;text-align:center}
+.why div{background:var(--card);border:2px dashed var(--gold);border-radius:12px;padding:18px}
+.why b{display:block;font:400 20px 'Rozha One';color:var(--red);margin-bottom:4px}
+.how{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}.how div{flex:1 1 200px;border-left:5px solid var(--gold);padding:6px 14px;background:var(--card)}
+footer{background:var(--red);color:#fff3d1;text-align:center;padding:30px 5vw 40px}
+footer a{color:var(--gold)}
+.wafloat{position:fixed;right:16px;bottom:calc(16px + var(--safe-b));background:#1e8e4a;color:#fff;border-radius:50px;padding:12px 18px;font-weight:700;text-decoration:none;z-index:15;box-shadow:0 4px 14px #0005}
+.ov{position:fixed;inset:0;background:#0009;z-index:30;display:none}.ov.show{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:31;transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;border-left:4px solid var(--gold)}
+.drawer.show{transform:none}
+.dh{background:var(--red);color:#fff3d1;padding:calc(14px + var(--safe-t)) 18px 14px;display:flex;justify-content:space-between;align-items:center}
+.dh h3{font-size:22px}.dh button{background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+.items{flex:1;overflow:auto;padding:12px 16px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.item small{color:var(--mute)}.qty{display:flex;align-items:center;gap:8px;margin-top:4px}
+.qty button{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--red);background:var(--card);color:var(--red);font:700 18px 'Mukta';cursor:pointer}
+.rm{background:none;border:0;color:var(--nv);cursor:pointer;font-weight:600}
+.empty{text-align:center;color:var(--mute);padding:40px 10px}
+.foot{padding:14px 16px calc(14px + var(--safe-b));border-top:3px double var(--gold);background:var(--card)}
+.foot input,.foot textarea{width:100%;font:16px 'Mukta';padding:8px 10px;margin-bottom:8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.foot textarea{height:56px;resize:none}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin-bottom:8px}
+.foot .btn{width:100%;text-align:center}
+.err{color:var(--nv);font-size:14px;min-height:18px;margin:0 0 6px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--leaf);color:#fff;padding:10px 20px;border-radius:30px;z-index:40;opacity:0;pointer-events:none;transition:opacity .25s}
+.toast.show{opacity:1}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="border"></div>
+<header>
+  <div class="logo"><b>Inti Ruchi</b><span>Mother’s Kitchen Pickles</span></div>
+  <nav><a href="#shop">Pickles</a><a href="#why">Why Inti Ruchi</a><a href="#how">How to order</a>
+  <button class="cartbtn" id="openCart" aria-label="Open cart">🛒 Cart<i id="cnt">0</i></button></nav>
+</header>
+
+<div class="hero">
+  <p class="te" style="margin:0">ఇంటి రుచి</p>
+  <h1>Inti Ruchi – Taste of Home</h1>
+  <p>Pickles made the way amma makes them: sun-dried ingredients, cold-pressed groundnut and sesame oil, hand-ground masala and no preservatives.</p>
+  <a class="btn" href="#shop">Order Pickles</a>
+  <div class="chips"><span>Veg and Non-Veg</span><span>No preservatives</span><span>Small-batch</span><span>Order on WhatsApp</span></div>
+</div>
+<div class="border"></div>
+
+<section id="shop">
+  <div class="sec-title"><h2>Our Pickles</h2><p>Choose a weight, add to cart, and send your order on WhatsApp.</p></div>
+  <div class="filters" id="filters">
+    <button data-f="all" class="on">All</button>
+    <button data-f="veg"><span class="dot"></span>Veg</button>
+    <button data-f="nonveg"><span class="dot nv"></span>Non-Veg</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="why">
+  <div class="sec-title"><h2>Why Inti Ruchi</h2></div>
+  <div class="why">
+    <div><b>Amma’s recipes</b>Handed down for generations and made in a home kitchen.</div>
+    <div><b>Pure oil, fresh masala</b>Cold-pressed oil and spices ground in small batches.</div>
+    <div><b>Hygienic packing</b>Packed in clean, dry glass-grade jars so it stays fresh.</div>
+    <div><b>Pickles with no shortcuts</b>No colours, no artificial preservatives.</div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="sec-title"><h2>How to order</h2></div>
+  <div class="how">
+    <div><b>1. Pick</b><br>Add your favourite pickles to the cart.</div>
+    <div><b>2. Send</b><br>Enter your name and address, then tap “Order on WhatsApp”.</div>
+    <div><b>3. Confirm</b><br>We confirm the total, delivery charge and payment on WhatsApp.</div>
+  </div>
+</section>
+
+<footer>
+  <h3 style="font-size:26px">Inti Ruchi</h3>
+  <p>Homemade pickles · Telangana, India<br>WhatsApp: <a href="https://wa.me/918341740186">+91 83417 40186</a></p>
+  <small>Final prices and delivery charges are confirmed on WhatsApp.</small>
+</footer>
+
+<a class="wafloat" href="https://wa.me/918341740186?text=Hello%20Inti%20Ruchi%2C%20I%20want%20to%20order%20pickles." target="_blank" rel="noopener">💬 Chat</a>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="dh"><h3>Your Cart</h3><button id="closeCart" aria-label="Close cart">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="foot" id="foot">
+    <div class="tot"><span>Total</span><span id="total">₹0</span></div>
+    <input id="cn" placeholder="Your name" autocomplete="name">
+    <input id="cp" placeholder="Phone number" inputmode="tel" autocomplete="tel">
+    <textarea id="ca" placeholder="Delivery address with pincode"></textarea>
+    <p class="err" id="err"></p>
+    <button type="button" class="btn wa" id="send">
+    Order on WhatsApp
+</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const WA="918341740186";
+// prices: [250g, 500g, 1kg]
+const P=[
+["Avakaya (Mango)","ఆవకాయ","veg","Raw mango, mustard and red chilli in groundnut oil.",[180,340,650],"#e8b64a","#c4601a"],
+["Magaya (Mango Slices)","మాగాయ","veg","Sun-dried mango with garlic and spices.",[170,320,620],"#f1c24e","#d98a1f"],
+["Gongura Pickle","గోంగూర","veg","Tangy sorrel leaves, the pride of Telangana.",[160,300,580],"#8a9a3a","#4d5b1c"],
+["Tomato Pickle","టమాటా","veg","Slow-cooked tomato with tamarind and chilli.",[150,280,540],"#d9482b","#8c1c13"],
+["Lemon (Nimmakaya)","నిమ్మకాయ","veg","Salted, sun-ripened lemon with chilli.",[150,280,540],"#f3d34a","#c99a14"],
+["Usirikaya (Amla)","ఉసిరికాయ","veg","Gooseberry pickle, rich in vitamin C.",[170,320,620],"#a9b84a","#5f7a21"],
+["Allam (Ginger)","అల్లం","veg","Ginger pickle that helps digestion.",[170,320,620],"#d6a85a","#9a6a22"],
+["Chicken Pickle (Bone)","చికెన్","nonveg","Country chicken fried and soaked in spicy masala.",[400,780,1500],"#c4501f","#7a1e10"],
+["Boneless Chicken Pickle","బోన్‌లెస్ చికెన్","nonveg","Tender boneless chicken in a Telugu-style masala.",[450,880,1700],"#cf5a24","#8a2312"],
+["Mutton Pickle","మటన్","nonveg","Slow-cooked mutton, rich and fiery.",[550,1080,2100],"#a63a1a","#5e130b"],
+["Prawn Pickle","రొయ్యలు","nonveg","Fresh prawns with coastal-style spices.",[500,980,1900],"#e2703a","#a02f14"],
+["Fish Pickle (Chepa)","చేపల","nonveg","Boneless fish pickle with a hint of tamarind.",[450,880,1700],"#d98a3a","#8c3d14"]
+];
+const W=["250 g","500 g","1 kg"];
+let cart=[];
+try{cart=JSON.parse(localStorage.getItem("ir_cart")||"[]")}catch(e){cart=[]}
+const $=id=>document.getElementById(id);
+const save=()=>{try{localStorage.setItem("ir_cart",JSON.stringify(cart))}catch(e){}};
+const jar=(a,b)=>`<svg viewBox="0 0 96 120"><rect x="22" y="4" width="52" height="16" rx="4" fill="${'#8c1c13'}"/><rect x="14" y="18" width="68" height="98" rx="18" fill="${a}" stroke="#3b1a0e" stroke-opacity=".4" stroke-width="3"/><rect x="24" y="52" width="48" height="36" rx="6" fill="#fff6df"/><text x="48" y="76" font-size="15" text-anchor="middle" font-family="Rozha One" fill="#8c1c13">Inti Ruchi</text></svg>`;
+function render(f="all"){
+  $("grid").innerHTML=P.map((p,i)=>({p,i})).filter(o=>f=="all"||o.p[2]==f).map(({p,i})=>`
+  <article class="card"><div class="jar" style="--c1:${p[5]}33;--c2:${p[6]}55">${jar(p[5],p[6])}</div>
+  <div class="body"><h3><span class="dot ${p[2]=="nonveg"?"nv":""}" title="${p[2]=="nonveg"?"Non-veg":"Veg"}"></span>${p[0]}</h3>
+  <div class="te2 te">${p[1]}</div><p>${p[3]}</p>
+  <div class="row"><select id="w${i}" onchange="pr(${i})" aria-label="Weight">${W.map((w,k)=>`<option value="${k}">${w}</option>`).join("")}</select><span class="price" id="p${i}">₹${p[4][0]}</span></div>
+  <button class="add" onclick="add(${i})">Add to cart</button></div></article>`).join("");
+}
+function pr(i){$("p"+i).textContent="₹"+P[i][4][$("w"+i).value]}
+function add(i){
+  const k=+$("w"+i).value,id=i+"-"+k,e=cart.find(c=>c.id==id);
+  e?e.q++:cart.push({id,i,k,q:1});
+  save();upd();toast(P[i][0]+" added to cart");
+}
+function chg(id,d){const e=cart.find(c=>c.id==id);if(!e)return;e.q+=d;if(e.q<1)cart=cart.filter(c=>c.id!=id);save();upd()}
+function rm(id){cart=cart.filter(c=>c.id!=id);save();upd()}
+const sum=()=>cart.reduce((s,c)=>s+P[c.i][4][c.k]*c.q,0);
+function upd(){
+  $("cnt").textContent=cart.reduce((s,c)=>s+c.q,0);
+  $("total").textContent="₹"+sum();
+  $("items").innerHTML=cart.length?cart.map(c=>{const p=P[c.i];return `<div class="item"><div><b>${p[0]}</b><br><small>${W[c.k]} · ₹${p[4][c.k]} each</small>
+  <div class="qty"><button onclick="chg('${c.id}',-1)" aria-label="Decrease">−</button><b>${c.q}</b><button onclick="chg('${c.id}',1)" aria-label="Increase">+</button></div></div>
+  <div style="text-align:right"><b>₹${p[4][c.k]*c.q}</b><br><button class="rm" onclick="rm('${c.id}')">Remove</button></div></div>`}).join(""):`<div class="empty">Your cart is empty.<br>Add some pickles to get started.</div>`;
+  $("foot").style.display=cart.length?"block":"none";
+}
+function open(){$("drawer").classList.add("show");$("ov").classList.add("show")}
+function close(){$("drawer").classList.remove("show");$("ov").classList.remove("show")}
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1600)}
+$("openCart").onclick=open;$("closeCart").onclick=close;$("ov").onclick=close;
+document.querySelectorAll("#filters button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("on"));b.classList.add("on");render(b.dataset.f)});
+
+$("send").addEventListener("click", function () {
+
+    const n = $("cn").value.trim();
+    const ph = $("cp").value.trim();
+    const a = $("ca").value.trim();
+
+    const phoneDigits = ph.replace(/\D/g, "");
+
+    if (!n || phoneDigits.length < 10 || phoneDigits.length > 13 || a.length < 10) {
+        $("err").textContent = "Please enter your name, valid phone number and full address.";
+        return;
+    }
+
+    if (cart.length === 0) {
+        $("err").textContent = "Your cart is empty.";
+        return;
+    }
+
+    $("err").textContent = "";
+
+    let message = "*New Order - Inti Ruchi*\n\n";
+
+    cart.forEach((c, index) => {
+        const p = P[c.i];
+
+        message += `${index + 1}. ${p[0]}\n`;
+        message += `Type: ${p[2] === "nonveg" ? "Non-Veg" : "Veg"}\n`;
+        message += `Weight: ${W[c.k]}\n`;
+        message += `Quantity: ${c.q}\n`;
+        message += `Price: Rs. ${p[4][c.k] * c.q}\n\n`;
+    });
+
+    message += `Total: Rs. ${sum()} (Delivery extra)\n\n`;
+    message += `Customer Name: ${n}\n`;
+    message += `Phone: ${ph}\n`;
+    message += `Address: ${a}\n\n`;
+    message += "Thank you for choosing Inti Ruchi!";
+
+    const whatsappURL =
+        `https://wa.me/${WA}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp in the current tab
+    window.location.href = whatsappURL;
+
+});
+
+
+render();upd();
+</script>
+</body>
+</html>
