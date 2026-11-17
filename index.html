@@ -92,7 +92,7 @@ footer a{color:var(--gold)}
 <body>
 <div class="border"></div>
 <header>
-  <div class="logo"><b>Inti Ruchi</b><span>Mother’s Kitchen Pickles</span></div>
+  <div class="logo"><b>Inti Ruchi</b><span>A Mother’s Kitchen</span></div>
   <nav><a href="#shop">Pickles</a><a href="#why">Why Inti Ruchi</a><a href="#how">How to order</a>
   <button class="cartbtn" id="openCart" aria-label="Open cart">🛒 Cart<i id="cnt">0</i></button></nav>
 </header>
@@ -164,18 +164,21 @@ footer a{color:var(--gold)}
 const WA="918341740186";
 // prices: [250g, 500g, 1kg]
 const P=[
+
+["Chicken Pickle (Bone)","చికెన్","nonveg","Country chicken fried and soaked in spicy masala.",[287,575,1150],"#c4501f","#7a1e10"],
+["Boneless Chicken Pickle","బోన్‌లెస్ చికెన్","nonveg","Tender boneless chicken in a Telugu-style masala.",[337,675,1350],"#cf5a24","#8a2312"],
+
+["Boneless Mutton Pickle","బోన్‌లెస్ మటన్","nonveg","Tender boneless mutton in a Telugu-style masala.",[450,900,1800],"#cf5a24","#8a2312"],
+["Mutton Pickle (Bone)","మటన్","nonveg","Slow-cooked mutton, rich and fiery.",[403,807,1615],"#a63a1a","#5e130b"],
+["Prawn Pickle","రొయ్యలు","nonveg","Fresh prawns with coastal-style spices.",[500,980,1900],"#e2703a","#a02f14"],
+["Fish Pickle (Chepa)","చేపల","nonveg","Boneless fish pickle with a hint of tamarind.",[450,880,1700],"#d98a3a","#8c3d14"],
+["Usirikaya (Amla)","ఉసిరికాయ","veg","Gooseberry pickle, rich in vitamin C.",[175,350,700],"#a9b84a","#5f7a21"],
 ["Avakaya (Mango)","ఆవకాయ","veg","Raw mango, mustard and red chilli in groundnut oil.",[180,340,650],"#e8b64a","#c4601a"],
 ["Magaya (Mango Slices)","మాగాయ","veg","Sun-dried mango with garlic and spices.",[170,320,620],"#f1c24e","#d98a1f"],
 ["Gongura Pickle","గోంగూర","veg","Tangy sorrel leaves, the pride of Telangana.",[160,300,580],"#8a9a3a","#4d5b1c"],
 ["Tomato Pickle","టమాటా","veg","Slow-cooked tomato with tamarind and chilli.",[150,280,540],"#d9482b","#8c1c13"],
 ["Lemon (Nimmakaya)","నిమ్మకాయ","veg","Salted, sun-ripened lemon with chilli.",[150,280,540],"#f3d34a","#c99a14"],
-["Usirikaya (Amla)","ఉసిరికాయ","veg","Gooseberry pickle, rich in vitamin C.",[170,320,620],"#a9b84a","#5f7a21"],
-["Allam (Ginger)","అల్లం","veg","Ginger pickle that helps digestion.",[170,320,620],"#d6a85a","#9a6a22"],
-["Chicken Pickle (Bone)","చికెన్","nonveg","Country chicken fried and soaked in spicy masala.",[400,780,1500],"#c4501f","#7a1e10"],
-["Boneless Chicken Pickle","బోన్‌లెస్ చికెన్","nonveg","Tender boneless chicken in a Telugu-style masala.",[450,880,1700],"#cf5a24","#8a2312"],
-["Mutton Pickle","మటన్","nonveg","Slow-cooked mutton, rich and fiery.",[550,1080,2100],"#a63a1a","#5e130b"],
-["Prawn Pickle","రొయ్యలు","nonveg","Fresh prawns with coastal-style spices.",[500,980,1900],"#e2703a","#a02f14"],
-["Fish Pickle (Chepa)","చేపల","nonveg","Boneless fish pickle with a hint of tamarind.",[450,880,1700],"#d98a3a","#8c3d14"]
+["Allam (Ginger)","అల్లం","veg","Ginger pickle that helps digestion.",[170,320,620],"#d6a85a","#9a6a22"]
 ];
 const W=["250 g","500 g","1 kg"];
 let cart=[];
